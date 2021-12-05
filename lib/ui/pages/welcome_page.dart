@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trip_app/ui/widgets/app_subtitle_text.dart';
 import 'package:trip_app/ui/widgets/app_title_text.dart';
+import 'package:trip_app/ui/widgets/custom_carousel_dots.dart';
 import 'package:trip_app/ui/widgets/responsive_button.dart';
 import 'package:trip_app/utils/colors.dart' as color;
 
@@ -74,20 +75,13 @@ class _WelcomePageState extends State<WelcomePage> {
                       ),
                       Column(
                         children: List.generate(3, (indexDots) {
-                          return Container(
-                            margin: const EdgeInsets.only(
-                              bottom: 2.0,
-                            ),
+                          return CustomCarouselDots(
                             height: index == indexDots ? 25.0 : 8.0,
-                            width: 8.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: index == indexDots
-                                  ? color.AppColors.mainColor
-                                  : color.AppColors.mainColor.withOpacity(
-                                      0.3,
-                                    ),
-                            ),
+                            color: index == indexDots
+                                ? color.AppColors.mainColor
+                                : color.AppColors.mainColor.withOpacity(
+                                    0.3,
+                                  ),
                           );
                         }),
                       ),
