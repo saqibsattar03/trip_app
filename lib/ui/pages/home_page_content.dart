@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trip_app/ui/widgets/app_title_text.dart';
+import 'package:trip_app/utils/colors.dart';
+import 'package:trip_app/utils/custom_tab_indicator.dart';
 
 class HomePageContent extends StatefulWidget {
   const HomePageContent({Key? key}) : super(key: key);
@@ -71,6 +73,10 @@ class _HomePageContentState extends State<HomePageContent>
                   unselectedLabelColor: Colors.grey,
                   indicatorSize: TabBarIndicatorSize.label,
                   isScrollable: true,
+                  indicator: CircleTabIndicator(
+                    color: AppColors.mainColor,
+                    radius: 4,
+                  ),
                   controller: _tabController,
                   tabs: [
                     Tab(
