@@ -74,7 +74,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         ],
                       ),
                       Column(
-                        children: List.generate(3, (indexDots) {
+                        children: List.generate(images.length, (indexDots) {
                           return CustomCarouselDots(
                             height: index == indexDots ? 25.0 : 8.0,
                             color: index == indexDots
